@@ -1,15 +1,20 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Counter from './components/Counter';
 import UserList from './components/UserList';
+import Layout from './components/Layout';
 
 function App() {
   return (
     <div className='App'>
-      <h1>Hello React!</h1>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis beatae repellat vero ratione officiis, culpa corrupti nemo doloribus in doloremque ipsam! Libero, quidem nam? Illum consequatur assumenda voluptatibus delectus veritatis?</p>
-
-      <Counter />
-      <UserList />
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<p>Home Page!</p>} />
+          <Route path='users' element={<UserList />} />
+          <Route path='counter' element={<Counter />} />
+          <Route path='*' element={<p>Page Not Found!</p>} />
+        </Route>
+      </Routes>
     </div>
   );
 }
