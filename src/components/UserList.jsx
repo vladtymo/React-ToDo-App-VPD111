@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "./UserList.css"
+import CreateUser from './CreateUser';
 
 const USERS = [
     { id: 1001, name: "Bob" },
@@ -20,6 +21,9 @@ export default function UserList() {
 
     return (
         <div className='UserList'>
+
+            <CreateUser />
+
             <h2>User List</h2>
             <ul>
                 {users.map((i, index) =>
