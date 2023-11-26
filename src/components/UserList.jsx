@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./UserList.css"
 import CreateUser from './CreateUser';
+import { Skeleton } from '@nextui-org/react';
 
 const USERS = [
     { id: 1001, name: "Bob" },

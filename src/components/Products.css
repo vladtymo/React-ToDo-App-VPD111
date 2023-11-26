@@ -1,0 +1,18 @@
+.Products ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.Products li {
+    background-color: rgb(110, 112, 172);
+    color: white;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    padding: 8px;
+    transition: .1s;
+}
+
+.Products li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px black;
+}

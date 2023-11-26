@@ -4,11 +4,15 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
+import { NextUIProvider } from "@nextui-org/react";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
-        <BrowserRouter>
+    // <React.StrictMode>
+    <BrowserRouter>
+        <NextUIProvider>
             <App />
-        </BrowserRouter>
-    </React.StrictMode>
+        </NextUIProvider>
+    </BrowserRouter>
+    // </React.StrictMode>
 );
