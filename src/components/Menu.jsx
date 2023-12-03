@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
 import './Menu.css'
+import { CounterContext } from '../contexts/counter.context';
 
 export default function Menu() {
+
+    const { count } = useContext(CounterContext);
+
     return (
         // <nav>
         //     <ul>
@@ -28,20 +32,25 @@ export default function Menu() {
                 {/* <AcmeLogo /> */}
                 <p className="font-bold text-inherit">ACME</p>
             </NavbarBrand>
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
+            <NavbarContent className="sm:flex gap-4" justify="center">
                 <NavbarItem>
-                    <Link color="foreground" href="#">
-                        Features
+                    <Link color="foreground" href="users">
+                        Users
                     </Link>
                 </NavbarItem>
                 <NavbarItem isActive>
-                    <Link href="#" aria-current="page">
-                        Customers
+                    <Link href="products" aria-current="page">
+                        Products
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="#">
-                        Integrations
+                    <Link color="foreground" href="counter">
+                        Counter ({count})
+                    </Link>
+                </NavbarItem>
+                <NavbarItem>
+                    <Link color="foreground" href="about">
+                        About
                     </Link>
                 </NavbarItem>
             </NavbarContent>

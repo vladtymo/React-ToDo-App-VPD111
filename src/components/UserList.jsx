@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./UserList.css"
 import CreateUser from './CreateUser';
-import { Skeleton } from '@nextui-org/react';
+import { Button, Skeleton } from '@nextui-org/react';
 
 const USERS = [
     { id: 1001, name: "Bob" },
@@ -31,7 +31,8 @@ export default function UserList() {
                     <li key={i.id}>[{i.id}] - {i.name}</li>
                 )}
             </ul>
-            <button onClick={add}>Add New User</button>
+            {/* <button onClick={add}>Add New User</button> */}
+            <Button onClick={add}>Add New User</Button>
         </div>
     )
 }
